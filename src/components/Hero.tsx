@@ -22,7 +22,7 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2 justify-center lg:justify-start mb-4">
                 <p className="text-primary font-medium tracking-wide uppercase text-sm">
-                  Arrocha & Piseiro — Wenceslau Guimarães/BA
+                  ARROCHA
                 </p>
                 <BadgeCheck className="w-5 h-5 text-primary" />
               </div>
