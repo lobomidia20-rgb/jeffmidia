@@ -21,7 +21,26 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-const pressArticles = [
+interface PressArticle {
+  title: string;
+  source: string;
+  date: string;
+  url: string;
+  excerpt: string;
+  image?: string;
+  placeholder?: boolean;
+}
+
+interface MediaAppearance {
+  type: string;
+  name: string;
+  date: string;
+  placeholder?: boolean;
+  image?: string;
+  description: string;
+}
+
+const pressArticles: PressArticle[] = [
   {
     title: "O ÁLBUM 'ESKEMINHA DE VERÃO' VEIO COM TUDO...",
     source: "Portal do Arrocha",
@@ -87,7 +106,7 @@ const pressArticles = [
   },
 ];
 
-const mediaAppearances = [
+const mediaAppearances: MediaAppearance[] = [
   {
     type: "TV - Nacional",
     name: "Band",
@@ -110,7 +129,7 @@ const mediaAppearances = [
     date: "JAN/2026",
     placeholder: false,
     image: bandVerao2026,
-    description: "O SOM DO VERÃO BAIANO. Jeff Torres invade a tela da Band Bahia com a energia do arrocha e piseiro! Uma apresentação imperdível que consagra o artista como a nova revelação da música no estado.",
+    description: "O SOM DO VERÃO BAIANO. Jeff Torres invade a tela da Band Bahia with a energia do arrocha e piseiro! Uma apresentação imperdível que consagra o artista como a nova revelação da música no estado.",
   },
 ];
 
@@ -146,10 +165,10 @@ const Press = () => {
                   >
                     {/* Article Image */}
                     <div className="aspect-video bg-muted rounded-xl mb-4 overflow-hidden flex items-center justify-center relative flex-shrink-0">
-                      {(article as any).image ? (
+                      {article.image ? (
                         <>
                           <img
-                            src={(article as any).image}
+                            src={article.image}
                             alt={article.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           />
@@ -210,10 +229,10 @@ const Press = () => {
                       </span>
                     </div>
 
-                    {(article as any).image && (
+                    {article.image && (
                       <div className="rounded-xl overflow-hidden mb-6 border border-border">
                         <img
-                          src={(article as any).image}
+                          src={article.image}
                           alt={article.title}
                           className="w-full h-auto"
                         />
@@ -273,10 +292,10 @@ const Press = () => {
                 >
                   {/* Image Area */}
                   <div className={`w-full relative overflow-hidden ${index === 0 ? "aspect-video md:aspect-[21/9]" : "aspect-square md:aspect-video"}`}>
-                    {(appearance as any).image ? (
+                    {appearance.image ? (
                       <>
                         <img
-                          src={(appearance as any).image}
+                          src={appearance.image}
                           alt={appearance.name}
                           className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-1000"
                           style={{ objectPosition: 'center 20%' }}
@@ -302,7 +321,7 @@ const Press = () => {
                     <h4 className={`font-heading font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors ${index === 0 ? "text-3xl md:text-5xl" : "text-2xl md:text-3xl"}`}>
                       {appearance.name}
                     </h4>
-                    {(appearance as any).description && (
+                    {appearance.description && (
                       <p className={`text-muted-foreground leading-relaxed ${index === 0 ? "text-lg md:text-xl" : "text-base md:text-lg"}`}>
                         {appearance.description}
                       </p>

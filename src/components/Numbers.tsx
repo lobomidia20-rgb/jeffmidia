@@ -1,4 +1,4 @@
-import { Instagram, Music2, TrendingUp, Heart, Eye } from "lucide-react";
+import { Instagram, Music2, TrendingUp, Heart, Eye, LucideIcon } from "lucide-react";
 import tiktokProfile from "@/assets/tiktok-profile.png";
 import instagramPrint from "@/assets/instagram-stats.png";
 import viewsPrint from "@/assets/views-stats.png";
@@ -6,7 +6,23 @@ import CountUp from "react-countup";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 
-const metrics = [
+interface Metric {
+  icon: LucideIcon;
+  label: string;
+  value: number;
+  suffix: string;
+  prefix: string;
+  detail: string;
+  highlight?: boolean;
+}
+
+interface SocialPrint {
+  title: string;
+  image: string;
+  placeholder?: boolean;
+}
+
+const metrics: Metric[] = [
   {
     icon: Eye,
     label: "Visualizações",
@@ -43,7 +59,7 @@ const metrics = [
 ];
 
 // Placeholder para prints - substitua com as imagens reais
-const socialPrints = [
+const socialPrints: SocialPrint[] = [
   {
     title: "Instagram",
     image: instagramPrint,
@@ -89,9 +105,9 @@ const Numbers = () => {
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 className="group relative bg-background rounded-2xl border border-border p-5 hover:border-primary/40 hover:shadow-xl transition-all duration-300 text-center h-full"
               >
-                {(metric as any).placeholder && (
+                {metric.highlight && (
                   <div className="absolute top-2 right-2 px-2 py-0.5 bg-accent text-accent-foreground text-xs rounded-full">
-                    Editar
+                    Destaque
                   </div>
                 )}
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
@@ -99,7 +115,7 @@ const Numbers = () => {
                 </div>
                 <p className="text-xs text-muted-foreground mb-1 font-medium">{metric.label}</p>
                 <div className="flex flex-col items-center justify-center min-h-[90px]">
-                  <div className={`font-heading font-bold text-foreground leading-tight transition-all duration-300 ${(metric as any).highlight ? "text-2xl sm:text-3xl text-primary" : "text-xl sm:text-2xl"
+                  <div className={`font-heading font-bold text-foreground leading-tight transition-all duration-300 ${metric.highlight ? "text-2xl sm:text-3xl text-primary" : "text-xl sm:text-2xl"
                     }`}>
                     <CountUp
                       end={metric.value}
