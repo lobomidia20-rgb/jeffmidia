@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Sobre", href: "#sobre" },
   { label: "Números", href: "#numeros" },
   { label: "Shows", href: "#shows" },
-  { label: "Vídeos", href: "#videos" },
   { label: "Imprensa", href: "#imprensa" },
 ];
 
