@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Localização",
-    value: "Gandu, Bahia",
+    value: "Wenceslau Guimarães, Bahia",
     placeholder: false,
   },
 ];

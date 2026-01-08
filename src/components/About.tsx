@@ -20,7 +20,7 @@ const bioPoints = [
   },
 ];
 
-const releaseText = `Jeff Torres é um cantor e compositor baiano de Gandu, que vem conquistando espaço no cenário do arrocha e piseiro brasileiro. Com mais de 100 mil seguidores em suas redes sociais (TikTok, Instagram e Facebook) e uma voz marcante, Jeff conecta seu público através de letras que falam de amor, superação e a alegria da vida nordestina. Seu projeto "Eskeminha de Verão" e presença digital crescente o posicionam como uma das promessas da nova geração do arrocha. "Aqui a pegada é diferente" — é assim que Jeff define sua proposta musical.`;
+const releaseText = `Jeff Torres é um cantor e compositor baiano de Wenceslau Guimarães, que vem conquistando espaço no cenário do arrocha e piseiro brasileiro. Com mais de 100 mil seguidores em suas redes sociais (TikTok, Instagram e Facebook) e uma voz marcante, Jeff conecta seu público através de letras que falam de amor, superação e a alegria da vida nordestina. Seu projeto "Eskeminha de Verão" e presença digital crescente o posicionam como uma das promessas da nova geração do arrocha. "Aqui a pegada é diferente" — é assim que Jeff define sua proposta musical.`;
 
 const About = () => {
   const [copied, setCopied] = useState(false);
@@ -50,7 +50,7 @@ const About = () => {
           <div className="space-y-8">
             <MotionWrapper delay={0.3} direction="left">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Jeff Torres é um cantor baiano que está redefinindo o arrocha moderno. Com raízes em Gandu, sul da Bahia,
+                Jeff Torres é um cantor baiano que está redefinindo o arrocha moderno. Com raízes em <span className="text-primary font-semibold">Wenceslau Guimarães</span>, sul da Bahia,
                 sua música mistura a energia do piseiro com as letras emotivas do arrocha tradicional. Com o slogan
                 <strong className="text-foreground"> "Aqui a pegada é diferente"</strong>, Jeff cria uma sonoridade
                 única que ressoa com o público de todas as idades.
@@ -62,14 +62,14 @@ const About = () => {
               {bioPoints.map((point, index) => (
                 <MotionWrapper key={index} delay={0.4 + index * 0.1} direction="left">
                   <div
-                    className="flex items-start gap-4 p-4 rounded-xl bg-background border border-border/50 hover:border-primary/30 transition-all hover:shadow-md"
+                    className="flex items-start gap-4 p-5 rounded-2xl bg-background/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 hover:bg-background/80 transition-all duration-500 hover:shadow-[0_0_20px_rgba(255,107,38,0.1)] group"
                   >
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <point.icon className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                      <point.icon className="w-6 h-6 text-primary group-hover:text-white" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-semibold text-foreground mb-1">{point.title}</h3>
-                      <p className="text-sm text-muted-foreground">{point.description}</p>
+                      <h3 className="font-heading font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{point.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{point.description}</p>
                     </div>
                   </div>
                 </MotionWrapper>

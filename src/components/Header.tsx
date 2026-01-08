@@ -24,15 +24,15 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? "bg-background/95 backdrop-blur-md shadow-md py-3"
-        : "bg-transparent py-5"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? "bg-background/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] py-2 border-b border-white/10"
+        : "bg-transparent py-6"
         }`}
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a href="#inicio" className="font-heading text-2xl font-bold text-foreground">
-          Jeff <span className="text-primary">Torres</span>
+        <a href="#inicio" className="font-heading text-2xl font-black text-foreground tracking-tighter hover:scale-105 transition-transform">
+          JEFF <span className="text-primary drop-shadow-[0_0_8px_rgba(255,107,38,0.5)]">TORRES</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -41,9 +41,10 @@ const Header = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs uppercase tracking-widest font-bold text-muted-foreground hover:text-primary transition-all relative group"
             >
               {link.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full shadow-[0_0_8px_rgba(255,107,38,0.8)]" />
             </a>
           ))}
         </nav>

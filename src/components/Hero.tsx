@@ -7,8 +7,9 @@ const Hero = () => {
   return (
     <section id="inicio" className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/50 to-transparent -z-10" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/30 to-transparent -z-10" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10 animate-pulse" />
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-[100px] -z-10 animate-blob" />
 
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -21,20 +22,20 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2 justify-center lg:justify-start mb-4">
                 <p className="text-primary font-medium tracking-wide uppercase text-sm">
-                  Arrocha & Piseiro — Gandu/BA
+                  Arrocha & Piseiro — Wenceslau Guimarães/BA
                 </p>
                 <BadgeCheck className="w-5 h-5 text-primary" />
               </div>
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="font-heading text-5xl sm:text-6xl lg:text-8xl font-black text-foreground mb-6 leading-[0.9] tracking-tighter"
             >
               JEFF<br />
-              <span className="text-gradient">TORRES</span>
+              <span className="text-gradient drop-shadow-[0_0_15px_rgba(255,107,38,0.3)]">TORRES</span>
             </motion.h1>
 
             <motion.div
