@@ -119,8 +119,7 @@ const Numbers = () => {
                     }`}>
                     <CountUp
                       end={metric.value}
-                      duration={3}
-                      delay={0.6 + index * 0.15}
+                      duration={2.5}
                       separator="."
                       prefix={metric.prefix}
                       suffix={metric.suffix}

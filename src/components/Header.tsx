@@ -52,7 +52,9 @@ const Header = () => {
         {/* CTA Button */}
         <div className="hidden md:block">
           <Button asChild>
-            <a href="#contato">Contratar Show</a>
+            <a href="https://wa.me/5573991239778?text=Olá! Gostaria de mais informações sobre contratação de show de Jeff Torres." target="_blank" rel="noopener noreferrer">
+              Contratar Show
+            </a>
           </Button>
         </div>
 
@@ -81,7 +83,12 @@ const Header = () => {
               </a>
             ))}
             <Button asChild className="mt-4">
-              <a href="#contato" onClick={() => setIsMobileMenuOpen(false)}>
+              <a
+                href="https://wa.me/5573991239778?text=Olá! Gostaria de mais informações sobre contratação de show de Jeff Torres."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Contratar Show
               </a>
             </Button>

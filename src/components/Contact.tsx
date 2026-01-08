@@ -12,8 +12,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefone/WhatsApp",
-    value: "(XX) XXXXX-XXXX",
-    placeholder: true,
+    value: "+55 73 99123-9778",
+    placeholder: false,
   },
   {
     icon: MapPin,
@@ -40,9 +40,9 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Mensagem enviada! (Conecte um backend para funcionalidade real)");
+    const text = `Olá Jeff! Meu nome é ${formData.name}. Gostaria de falar sobre: ${formData.subject}. ${formData.message}`;
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/5573991239778?text=${encodedText}`, "_blank");
   };
 
   return (
