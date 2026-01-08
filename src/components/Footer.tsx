@@ -1,22 +1,28 @@
-import { Heart, Instagram, ExternalLink } from "lucide-react";
+import { Heart, Instagram, ExternalLink, Facebook } from "lucide-react";
 
 const socialLinks = [
-  { 
-    icon: Instagram, 
-    label: "Instagram", 
+  {
+    icon: Instagram,
+    label: "Instagram",
     url: "https://instagram.com/jefftorresof",
     username: "@jefftorresof"
   },
-  { 
-    icon: ExternalLink, 
-    label: "TikTok", 
+  {
+    icon: ExternalLink,
+    label: "TikTok",
     url: "https://tiktok.com/@jefftorresof",
     username: "@jefftorresof"
   },
-  { 
-    icon: ExternalLink, 
-    label: "Threads", 
+  {
+    icon: ExternalLink,
+    label: "Threads",
     url: "https://threads.net/@jefftorresof",
+    username: "@jefftorresof"
+  },
+  {
+    icon: Facebook,
+    label: "Facebook",
+    url: "https://facebook.com/jefftorresof",
     username: "@jefftorresof"
   },
 ];

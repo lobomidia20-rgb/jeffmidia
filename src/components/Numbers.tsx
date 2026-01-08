@@ -1,4 +1,4 @@
-import { Instagram, Music2, TrendingUp, Heart, Eye, LucideIcon } from "lucide-react";
+import { Instagram, Music2, TrendingUp, Heart, Eye, LucideIcon, Facebook } from "lucide-react";
 import tiktokProfile from "@/assets/tiktok-profile.png";
 import instagramPrint from "@/assets/instagram-stats.png";
 import viewsPrint from "@/assets/views-stats.png";
@@ -35,11 +35,11 @@ const metrics: Metric[] = [
   },
   {
     icon: TrendingUp,
-    label: "Seguidores",
+    label: "Seguidores Totais",
     value: 100,
     suffix: " mil",
     prefix: "+ ",
-    detail: "nas redes sociais",
+    detail: "Insta, TikTok e Facebook",
   },
   {
     icon: Heart,
@@ -50,12 +50,12 @@ const metrics: Metric[] = [
     detail: "curtidas totais",
   },
   {
-    icon: Instagram,
-    label: "Posts Instagram",
+    icon: Facebook,
+    label: "Engajamento",
     value: 270,
-    suffix: "",
+    suffix: "%",
     prefix: "+ ",
-    detail: "publicações",
+    detail: "crescimento constante",
   },
 ];
 

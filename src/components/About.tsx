@@ -11,7 +11,7 @@ const bioPoints = [
   {
     icon: Users,
     title: "Presença Digital",
-    description: "+61 mil seguidores e crescimento orgânico constante",
+    description: "+100 mil seguidores (TikTok, Instagram e Facebook)",
   },
   {
     icon: Sparkles,
@@ -20,7 +20,7 @@ const bioPoints = [
   },
 ];
 
-const releaseText = `Jeff Torres é um cantor e compositor baiano de Gandu, que vem conquistando espaço no cenário do arrocha e piseiro brasileiro. Com mais de 61 mil seguidores no Instagram e uma voz marcante, Jeff conecta seu público através de letras que falam de amor, superação e a alegria da vida nordestina. Seu projeto "Eskeminha de Verão" e presença digital crescente o posicionam como uma das promessas da nova geração do arrocha. "Aqui a pegada é diferente" — é assim que Jeff define sua proposta musical.`;
+const releaseText = `Jeff Torres é um cantor e compositor baiano de Gandu, que vem conquistando espaço no cenário do arrocha e piseiro brasileiro. Com mais de 100 mil seguidores em suas redes sociais (TikTok, Instagram e Facebook) e uma voz marcante, Jeff conecta seu público através de letras que falam de amor, superação e a alegria da vida nordestina. Seu projeto "Eskeminha de Verão" e presença digital crescente o posicionam como uma das promessas da nova geração do arrocha. "Aqui a pegada é diferente" — é assim que Jeff define sua proposta musical.`;
 
 const About = () => {
   const [copied, setCopied] = useState(false);
